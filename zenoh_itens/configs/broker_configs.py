@@ -1,8 +1,8 @@
 import random
 
 zenoh_broker_configs = {
-    'number_of_pub_threads': 4,
-    "number_of_sub_threads": 1,
+    'number_of_pub_threads': 5,
+    "number_of_sub_threads": 5,
     'broker_address': 'tcp/192.168.1.11:7447',
     "id": "malco-desktop-publisher",
     "HOST": "localhost",

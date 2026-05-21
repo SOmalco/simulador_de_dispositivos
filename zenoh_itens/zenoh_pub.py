@@ -26,8 +26,8 @@ def publisher(thread_name):
 
     intervalo = zenoh_broker_configs['messages_interval']
 
-    print(f"Declaring publisher for key expression '{key}'...")
-    pub = session.declare_publisher(key)
+    print(f"Declaring publisher for key expression '{thread_name}'...")
+    pub = session.declare_publisher(thread_name)
 
     csv_file = [['send_time', 'client_id', 'thread_name', '# of message']]
     value_counter = 0

@@ -1,11 +1,11 @@
 # Simulador de Dispositivos
 
-Threads inicializa varios publishers de uma vez para o mesmo router na mesma key.
+Threads inicializa varios publishers de uma vez para o mesmo roteador na mesma key.
 
 Pub conecta no endpoint, abre a sessão e publica 10 mensagens num intervalo aleatório entre 1 e 10 minutos, no formato:
 - {Datetime Now} -- {sessao do zenoh id} -- {número da ordem da mensagem}
 
-e escreve num csv para cada thread publicadora
+- E escreve num csv para cada thread publicadora
 
 Sub le  a publicacao no topico
 
@@ -21,4 +21,9 @@ Sub le  a publicacao no topico
 - Rodar o broker Zenoh:
 - `C:\Users\mosoa\Downloads\zenoh-router >zenohd.exe`
 - Rodar a thread de [Publishers](zenoh_pub_threads.py)
-- 
+
+
+# Cenários
+1. Um publisher com múltiplos subscribers ![img.png](img.png)
+2. N publishers com N Subscribers ![img_1.png](img_1.png)
+3. 

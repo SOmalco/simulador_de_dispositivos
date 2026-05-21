@@ -5,33 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abd9fca6-c1e5-43e0-9643-f6394425230e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/simulador_de_dispositivos.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iterator.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt/callbacks/callbacks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt/configs/broker_configs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt/configs/broker_configs_example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt/mqtt_pub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt/mqtt_sub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt__out_of_order_messages.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt__time_to_receive.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt_pub_threads.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mqtt_sub_threads.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh__out_of_order_messages.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh__time_to_receive.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh_itens/configs/broker_configs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh_itens/zenoh_pub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh_itens/zenoh_sub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh_pub_threads.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zenoh_sub_threads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt/callbacks/callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt/callbacks/callbacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt/configs/broker_configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt/configs/broker_configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt/configs/broker_configs_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt/configs/broker_configs_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt/mqtt_pub.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt/mqtt_pub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt/mqtt_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt/mqtt_sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt_pub_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt_pub_threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mqtt_sub_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt_sub_threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zenoh_itens/configs/broker_configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/zenoh_itens/configs/broker_configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zenoh_itens/zenoh_pub.py" beforeDir="false" afterPath="$PROJECT_DIR$/zenoh_itens/zenoh_pub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zenoh_itens/zenoh_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/zenoh_itens/zenoh_sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zenoh_pub_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/zenoh_pub_threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zenoh_sub_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/zenoh_sub_threads.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,42 +46,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.analysis.executor": "Run",
-    "Python.client.executor": "Run",
-    "Python.mqtt_analysis.executor": "Run",
-    "Python.mqtt_pub.executor": "Run",
-    "Python.mqtt_pub_threads (1).executor": "Run",
-    "Python.mqtt_sub.executor": "Run",
-    "Python.mqtt_sub_threads.executor": "Run",
-    "Python.mqtt_threads.executor": "Run",
-    "Python.threads.executor": "Run",
-    "Python.zenoh_pub.executor": "Run",
-    "Python.zenoh_pub_threads (1).executor": "Run",
-    "Python.zenoh_sub (1).executor": "Run",
-    "Python.zenoh_sub.executor": "Run",
-    "Python.zenoh_sub_threads.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/mosoa/PycharmProjects/simulador_de_dispositivos/mqtt/configs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_pub.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_pub_threads (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_sub.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_sub_threads.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_threads.executor&quot;: &quot;Run&quot;,
+    &quot;Python.threads.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zenoh_pub.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zenoh_pub_threads (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.zenoh_pub_threads.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zenoh_sub (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.zenoh_sub.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zenoh_sub_threads.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;ShowUsagesActions.previewPropertyKey&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mosoa/PycharmProjects/simulador_de_dispositivos/mqtt/configs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "HgIgnore"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;HgIgnore&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mosoa\PycharmProjects\simulador_de_dispositivos\mqtt\configs" />
@@ -104,29 +96,7 @@
       <recent name="C:\Users\mosoa\PycharmProjects\simulador_de_dispositivos\mqtt" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mqtt_sub_threads">
-    <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="simulador_de_dispositivos" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.zenoh_pub_threads">
     <configuration name="mqtt_pub_threads (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="simulador_de_dispositivos" />
       <option name="ENV_FILES" value="" />
@@ -171,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="zenoh_pub_threads (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="zenoh_pub_threads" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="simulador_de_dispositivos" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,6 +155,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zenoh_pub_threads.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="zenoh_sub" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="simulador_de_dispositivos" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zenoh_itens" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zenoh_itens/zenoh_sub.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.zenoh_pub_threads" />
+        <item itemvalue="Python.zenoh_sub_threads" />
+        <item itemvalue="Python.zenoh_sub" />
         <item itemvalue="Python.mqtt_pub_threads (1)" />
         <item itemvalue="Python.mqtt_sub_threads" />
-        <item itemvalue="Python.zenoh_pub_threads (1)" />
-        <item itemvalue="Python.zenoh_sub_threads" />
-        <item itemvalue="Python.analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +264,21 @@
           <url>file://$PROJECT_DIR$/analysis.py</url>
           <line>44</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python313/Lib/threading.py</url>
+          <line>1096</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/AppData/Local/Programs/Python/Python313/Lib/threading.py</url>
+          <line>1112</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mqtt/mqtt_sub.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

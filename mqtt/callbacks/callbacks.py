@@ -1,37 +1,40 @@
-import csv
 import datetime
 import pandas as pd
 from mqtt.configs.broker_configs import mqtt_broker_configs
 
 class MessageList:
     def __init__(self):
-        self.shared_list = []
-    def add(self, num):
-        self.shared_list.append(num)
+        self.shared_list = {}
+        number_of_threads = mqtt_broker_configs['number_of_pub_threads']
+        for thread_n in range(number_of_threads):
+            self.shared_list[f'Thread-{thread_n}'] = []
+    def add(self, thread_n, thread_message):
+       self.shared_list[thread_n].append(thread_message)
 
 list1 = MessageList()
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print(f'Cliente Conectado com sucesso: {client._client_id}')
-        client.subscribe(mqtt_broker_configs["topic"])
+        print(f'Cliente Conectado com sucesso: {client._client_id}\n')
 
     else:
         print(f'Erro ao me conectar! codigo={rc}')
 
 
 def on_subscribe(client, userdata, mid, granted_qos):
-    print(f'Client Subscribed at {mqtt_broker_configs["topic"]}')
     print(f'QOS: {granted_qos}')
 
+def on_disconnect(client, userdata, mid, granted_qos):
+    print(f'Client Disconnected')
 
 def on_message(client, userdata, message):
     horario = str(datetime.datetime.now())
     message = message.payload.decode("utf-8").split(',')
     thread = message[2]
     message.append(horario)
-    list1.add(message)
+    list1.add(thread, message)
 
-    if len(list1.shared_list) > 9:
-        df =  pd.DataFrame(list1.shared_list, columns=['send_time', 'client_id', 'thread_name', '# of message', 'received_time'])
+    print(f"client: {client._client_id} thread: {thread} lista: {list1.shared_list}")
+    if len(list1.shared_list[thread]) > 9:
+        df =  pd.DataFrame(list1.shared_list[thread], columns=['send_time', 'client_id', 'thread_name', '# of message', 'received_time'])
         df.to_csv(f'mqtt-csvs/{thread}.csv', index=False)

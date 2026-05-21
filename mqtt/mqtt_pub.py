@@ -6,20 +6,20 @@ import paho.mqtt.client as mqtt
 from .configs.broker_configs import mqtt_broker_configs
 
 def mqtt_publisher(thread_name):
-    client_id = mqtt_broker_configs["id"]
+    client_id = f"{mqtt_broker_configs['id']}-{thread_name}"  # Garante um client_id único por thread/conexão MQTT.
     endpoint = mqtt_broker_configs["HOST"]
     port = mqtt_broker_configs["PORT"]
-    topic = mqtt_broker_configs["topic"]
-    intervalo = mqtt_broker_configs["messages_interval"]
+    topic = thread_name
+    intervalo = 1# random.randint(1, 10)
 
     # --- Main Program ---
     print("--- MQTT Publisher ---")
     print(f"I am a MQTT-Publisher!")
     print(f"Connecting to: {endpoint}:{port}")
-    print(f"Publishing on Topic: {topic}\n")
+    print(f"Publishing on Topic: {topic} after {str(intervalo)} seconds\n")
 
     print("Opening session...")
-    pub = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, 'malco-desktop')
+    pub = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, client_id=client_id)
     pub.connect(host=endpoint, port=port)
 
     csv_file = [['send_time', 'client_id', 'thread_name', '# of message']]
@@ -30,7 +30,7 @@ def mqtt_publisher(thread_name):
         try:
             horario = datetime.datetime.now()
             message =  f"{horario},{client_id},{thread_name},{value_counter}"
-            print(f" >>> Sending: '{message}'")
+            print(f" >>> Sending: '{message}'\n")
             pub.publish(topic=topic, payload=message)
             row = message.split(",")
             csv_file.append(row)
