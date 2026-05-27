@@ -1,6 +1,6 @@
 import threading
 import time
-from  mqtt.mqtt_sub import mqtt_start_sub
+from mqtt.mqtt_sub import mqtt_start_sub
 from mqtt.configs.broker_configs import mqtt_broker_configs
 
 number_of_subs = mqtt_broker_configs['number_of_sub_threads']

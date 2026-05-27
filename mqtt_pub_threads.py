@@ -11,7 +11,7 @@ for i in quantity:
     thread_names.append(f"Thread-{i}")
 
 threads = list(map(lambda x: threading.Thread(target=mqtt_publisher,
-                           args=(x, )), thread_names))
+                                              args=(x, )), thread_names))
 
 list(map(lambda x: x.start(), threads))
 list(map(lambda x: x.join(), threads))

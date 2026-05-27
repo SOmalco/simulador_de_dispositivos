@@ -5,12 +5,13 @@ import time
 import paho.mqtt.client as mqtt
 from .configs.broker_configs import mqtt_broker_configs
 
+
 def mqtt_publisher(thread_name):
     client_id = f"{mqtt_broker_configs['id']}-{thread_name}"  # Garante um client_id único por thread/conexão MQTT.
     endpoint = mqtt_broker_configs["HOST"]
     port = mqtt_broker_configs["PORT"]
     topic = thread_name
-    intervalo = 1# random.randint(1, 10)
+    intervalo = 1  # random.randint(1, 10)
 
     # --- Main Program ---
     print("--- MQTT Publisher ---")
@@ -29,7 +30,7 @@ def mqtt_publisher(thread_name):
         time.sleep(intervalo)
         try:
             horario = datetime.datetime.now()
-            message =  f"{horario},{client_id},{thread_name},{value_counter}"
+            message = f"{horario},{client_id},{thread_name},{value_counter}"
             print(f" >>> Sending: '{message}'\n")
             pub.publish(topic=topic, payload=message)
             row = message.split(",")
@@ -47,4 +48,3 @@ def mqtt_publisher(thread_name):
     # with open(f'mqtt-csvs/1_Threads/{thread_name}-Mqtt.csv', 'w', newline='') as f:
     #     writer = csv.writer(f)
     #     writer.writerows(csv_file)  # Write header
-

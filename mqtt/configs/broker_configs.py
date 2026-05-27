@@ -10,5 +10,5 @@ mqtt_broker_configs = {
     "KEPPALIVE": 30,
     "topic": "test",
     'number_of_messages': 10,
-    "messages_interval": 1#random.randint(1, 10)
+    "messages_interval": 1  # random.randint(1, 10)
 }
