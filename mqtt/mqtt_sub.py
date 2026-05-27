@@ -5,6 +5,7 @@ from .configs.broker_configs import mqtt_broker_configs
 from .callbacks.callbacks import on_connect, on_subscribe, on_message, on_disconnect
 from mqtt.callbacks.callbacks import MessageList
 
+
 class MqttClientConnection:
     def __init__(self,
                  broker_ip: str,
@@ -49,6 +50,7 @@ class MqttClientConnection:
         except:
             return False
 
+
 def mqtt_start_sub(thread_name=None):
     print(f"Starting MQTT Subscriber...{thread_name}")
     mqtt_client_connection = MqttClientConnection(broker_ip=mqtt_broker_configs["HOST"],
@@ -60,6 +62,7 @@ def mqtt_start_sub(thread_name=None):
 
     while True:
         time.sleep(0.001)
+
 
 if __name__ == "__main__":
     mqtt_start_sub()
