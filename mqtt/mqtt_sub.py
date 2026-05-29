@@ -33,7 +33,11 @@ class MqttClientConnection:
         mqtt_client.connect(host=self.__broker_ip,
                             port=self.__port,
                             keepalive=self.__keepalive)
-        mqtt_client.subscribe(thread_name)
+
+        if mqtt_broker_configs["number_of_pub_threads"] == 1:
+            mqtt_client.subscribe("Thread-0")
+        else:
+            mqtt_client.subscribe(thread_name)
         print(f"client on port {self.__port} subscribed to {thread_name}")
 
         # self.__mqtt_client = mqtt_client
