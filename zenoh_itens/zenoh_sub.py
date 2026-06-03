@@ -3,6 +3,7 @@ from .configs.broker_configs import zenoh_broker_configs
 import zenoh
 import time
 import pandas as pd
+from functools import partial
 
 # --- Configuration ---
 # Define connection details
@@ -12,7 +13,7 @@ key = zenoh_broker_configs['topic']
 class MessageList:
     def __init__(self):
         self.shared_list = {}
-        number_of_threads = zenoh_broker_configs['number_of_pub_threads']
+        number_of_threads = zenoh_broker_configs['number_of_sub_threads']
         for thread_n in range(number_of_threads):
             self.shared_list[f'Thread-{thread_n}'] = []
     def add(self, thread_n, thread_message):
@@ -21,18 +22,25 @@ class MessageList:
 list1 = MessageList()
 
 # --- Functions ---
-def listener(sample):
+def listener(sample,
+             device_name=None):
     """Callback function to handle incoming messages."""
     horario = str(datetime.datetime.now())
     message = bytes(sample.payload).decode('utf-8').split(',')
     print(message)
-    thread = message[2]
+    if zenoh_broker_configs['number_of_pub_threads'] ==1:
+        thread = device_name
+    else:
+        thread = message[2]
+
     message.append(horario)
     list1.add(thread, message)
 
     if len(list1.shared_list[thread]) > 9:
-        df =  pd.DataFrame(list1.shared_list[thread], columns=['send_time', 'client_id', 'thread_name', '# of message', 'received_time'])
-        df.to_csv(f'zenoh-csvs/{thread}.csv', index=False)
+        df = pd.DataFrame(list1.shared_list[thread],
+                          columns=['send_time', 'client_id', 'thread_name', '# of message', 'received_time'])
+        df.to_csv(f'zenoh-csvs/{thread}.csv',
+                  index=False)
 
 # --- Main Program ---
 print("--- Zenoh Subscriber ---")
@@ -50,9 +58,16 @@ def zenoh_start_sub(thread_name=None):
     print("Opening session...")
     session = zenoh.open(conf)
 
-    print(f'Client Subscribed at {thread_name}')
-    sub = session.declare_subscriber(thread_name, listener)
-
+    if zenoh_broker_configs["number_of_pub_threads"] == 1:
+        print(f'Client Subscribed at Thread-0')
+        device_listener = partial(listener,
+                                  device_name=thread_name)
+        sub = session.declare_subscriber("Thread-0",
+                                         device_listener)
+    else:
+        print(f'Client Subscribed at {thread_name}')
+        sub = session.declare_subscriber(thread_name,
+                                         listener)
     print("\nWaiting for messages... Press Ctrl+C to quit.")
     try:
         while True:
